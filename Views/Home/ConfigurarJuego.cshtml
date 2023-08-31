@@ -5,24 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css">
 </head>
   <body>
-    <!--navbar--> 
-    <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">
-      <img src="../img/logo.png" alt="Logo" width="70" height="auto" class="d-inline-block align-text-top">
-      PreguntadORT
-    </a>
-  </div>
-</nav>
     
 <h1>Configura el juego</h1>
 
 <form action='@Url.Action("Comenzar")'>      
   <h3>Dificultad</h3>
-    <select name="dificultad" id="">
+    <select name="dificultad">
      <option value="2">Facil</option>
       <option value="1">Dificil</option>
       <option value="-1">Todas</option>
@@ -37,13 +30,45 @@
      <option value="5">Historia</option>
      <option value="-1">Todas</option>
     </select>
-
+<div class="formulario">
   <label> Nombre</label>
   <input autocomplete="off" type="text" name="username" required placeholder="Ingrese su nombre">
-
+</div>
   <input class="boton" type="submit" value="Iniciar">
 </form>
 
+
+
+
+<div class="formulario">
+    <form action='@Url.Action("Comenzar")'>
+      <h1>Configurar juego</h1>
+      <p>Nombre del jugador: <input autocomplete="off" type="text" name="username" required
+          placeholder="Ingrese su nombre"> /></p>
+      <div>
+        <h3>Dificultad</h3>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary">Facil</button>
+          <button type="button" class="btn btn-secondary">Dificil</button>
+          <button type="button" class="btn btn-secondary">Todas</button>
+        </div>
+      </div>
+      <div>
+        <h3>Categoría</h3>
+        <p>
+          <input type="radio" name="categoria" /> Historia <br />
+          <input type="radio" name="categoria" /> Deporte <br />
+          <input type="radio" name="categoria" /> Cine <br />
+          <input type="radio" name="categoria" /> Geografia <br />
+          <input type="radio" name="categoria" /> Ciencia <br />
+          <input type="radio" name="categoria" /> Todas las categorías
+        </p>
+      </div>
+
+
+      <input type="submit" class="btn btn-success" value="Iniciar" />
+    </form>
+  </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

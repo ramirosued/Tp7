@@ -1,7 +1,18 @@
-@if(@ViewBag.VerificadoRespuesta==true){
-    <h1>Correcto</h1>
-} else{
-    <h1> incorrecto</h1>
-}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<a href='@Url.Action("Jugar")'>Siguiente pregunta</a>
+@if (@ViewBag.VerificadoRespuesta == true)
+{
+    <div class="correcto">
+        <h1>Respuesta correcta!</h1>
+        <h4 class="player">+50 puntos</h4>
+        <a href='@Url.Action("Jugar")' type="button" class="btn btn-success">Siguiente nivel</a>
+    </div>
+}
+else
+{
+    <div class="incorrecto">
+        <h1>Respuesta incorrecta!</h1>
+        <a href='@Url.Action("Jugar")' type="button" class="btn btn-success">Siguiente nivel</a>
+    </div>
+}

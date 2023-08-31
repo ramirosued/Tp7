@@ -11,6 +11,16 @@ static class Juego{
         PuntajeActual=0;
         CantCorrectas=0;
     }
+    public static string ObtenerUsername(){
+        return Username;
+    }
+    public static int ObtenerPuntajeActual(){
+        return PuntajeActual;
+    }
+    public static int ObtenerCantCorrectas(){
+        return CantCorrectas;
+    }
+
     public static List<Categoria> ObtenerCategorias(){
         List<Categoria> ListaCategorias = new List<Categoria>();
         return ListaCategorias;
@@ -49,7 +59,7 @@ static class Juego{
             if(item.IdRespuesta==idRespuesta&&item.Correcta==true){
                 correcto=true;
                 CantCorrectas++;
-                PuntajeActual+=50;
+                PuntajeActual=PuntajeActual+50;
             }
         }
         ListaPreguntas.RemoveAt(0);

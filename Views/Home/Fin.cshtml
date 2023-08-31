@@ -1,3 +1,9 @@
-<h1>Felicidades, terminaste</h1>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<a href='@Url.Action("Comenzar")'>Volver a jugar</a>
+<div class="fin">
+    <h1>Fin del juego</h1>
+    <h4 class="player">Jugador: @ViewBag.username</h4>
+    <h4 class="player">Puntaje: @ViewBag.puntos</h4>
+    <a href='@Url.Action("Comenzar")' type="button" class="btn btn-success">Volver a jugar</a>
+</div>

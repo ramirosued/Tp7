@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
 namespace Tp7.Controllers;
-
 public class HomeController : Controller
 {
     public IActionResult Index()
@@ -21,16 +19,18 @@ public class HomeController : Controller
     {
         Juego.CargarPartidas(username, dificultad, categoria);
         if(Juego.ListaPreguntas.Count!=0){
-            return RedirectToAction("Jugar", new{Username=username});
+            return RedirectToAction("Jugar");
         }else{
             return RedirectToAction("ConfigurarJuego");
         }
         
     }
 
-    public IActionResult Jugar(string Username)
+    public IActionResult Jugar()
     {   
-        ViewBag.username=Username;
+        ViewBag.username=Juego.ObtenerUsername();
+        ViewBag.puntos= Juego.ObtenerPuntajeActual();
+        ViewBag.CantCorrectas=Juego.ObtenerCantCorrectas();
         if(Juego.ListaPreguntas.Count==0){
             return View("Fin");
         }else{
@@ -46,6 +46,3 @@ public class HomeController : Controller
         return View();
     }
 }
-
-
-
