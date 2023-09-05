@@ -10,6 +10,7 @@ static class Juego{
         Username="";
         PuntajeActual=0;
         CantCorrectas=0;
+
     }
     public static string ObtenerUsername(){
         return Username;

@@ -68,6 +68,7 @@ public static class BD
 
     public static List<Respuesta> ObtenerRespuestas(List<Pregunta> preguntas)
     {
+        ListaRespuestas.Clear();
         using (SqlConnection bd = new SqlConnection(connectionString))
         {
             string sql = "SELECT * FROM Respuestas where FkPregunta=@IdPregunta";

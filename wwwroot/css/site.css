@@ -38,7 +38,7 @@ ul{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 10%;
+    width: 20%;
     justify-content: space-between;
 }
 li{
@@ -48,8 +48,8 @@ header img{
     border-radius: 100%;
 }
 a{
-    text-decoration: none;
-    color: #ffffff;
+    text-decoration: none !important;
+    color: #ffffff !important;
 }
 .jugar{
     padding: 5px;
@@ -72,10 +72,15 @@ a{
     font-size: x-large;
 }
 .formulario{
+    margin-left: 25%;
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(37, 37, 250, 0.61);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
+    text-align: center;
 }
 .juego{
     display: flex;
