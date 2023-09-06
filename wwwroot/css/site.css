@@ -47,7 +47,7 @@ li{
 header img{
     border-radius: 100%;
 }
-a{
+.navbar a{
     text-decoration: none !important;
     color: #ffffff !important;
 }
